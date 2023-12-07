@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="733.33337"
+   height="733.33337"
+   viewBox="0 0 22.000001 22.000001"
+   version="1.1"
+   id="svg2"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <title
+     id="title1" />
+  <g
+     id="Complete"
+     transform="translate(-0.99999994,-0.99999994)">
+    <g
+       id="x-circle">
+      <g
+         id="g2">
+        <circle
+           cx="12"
+           cy="12"
+           data-name="--Circle"
+           fill="none"
+           id="_--Circle"
+           r="10"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2" />
+        <line
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           x1="15.535535"
+           x2="8.4644661"
+           y1="11.999991"
+           y2="11.999988"
+           id="line1" />
+      </g>
+    </g>
+  </g>
+</svg>

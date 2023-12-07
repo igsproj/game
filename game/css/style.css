@@ -1,0 +1,525 @@
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes rocks-left-right {
+  0% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  10% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  20% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  30% {
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -25deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  70% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, 20deg);
+  }
+
+  90% {
+    transform: rotate3d(0, 0, 1, 25deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes test{
+  0% {
+    transform: translateY(100px)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+@keyframes opacity-flow {
+  0% {
+    filter: opacity(50%)
+  }
+
+  30% {
+    filter: opacity(70%)
+  }
+
+  60% {
+    filter: opacity(100%)
+  }
+}
+
+/*
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
+*/
+
+/**********************************************************************/
+.game-section {
+  position: relative;
+}
+
+
+img {
+  line-height: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus-visible {
+  outline: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spinner {
+  font-size: 40px;
+}
+
+.game-top-menu {
+  padding: 15px 15px;
+}
+
+.game-theme-img {
+  position: relative;
+}
+
+.set-btn-img path {
+  transition: fill .3s ease-in-out;
+}
+
+.set-btn-img:hover path {
+  fill:coral;
+}
+
+.grid-btn path {
+  transition: fill .3s ease-in-out;
+}
+
+.grid-btn:hover path {
+  fill:coral;
+}
+
+.grid-btn:active {
+  transform: translateX(5px);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bkg-style {
+  background: none;
+}
+
+.bkg-style-cards {
+  background-image: image-set(
+    "../img/themes/cards/bkg.avif" type("image/avif"),
+    "../img/themes/cards/bkg.webp" type("image/webp"),
+    "../img/themes/cards/bkg.jpg" type("image/jpeg")
+  );
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.img-style-cards {
+  background-image: image-set(
+    "../img/themes/cards/img.avif" type("image/avif"),
+    "../img/themes/cards/img.webp" type("image/webp"),
+    "../img/themes/cards/img.jpg" type("image/jpeg")
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: calc(100vw - 16px);
+  max-height: 1200px;
+}
+
+.bkg-style-funny {
+  background-image: image-set(
+    "../img/themes/funny/bkg.avif" type("image/avif"),
+    "../img/themes/funny/bkg.webp" type("image/webp"),
+    "../img/themes/funny/bkg.jpg" type("image/jpeg")
+  );
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+.img-style-funny {
+  background-image: image-set(
+    "../img/themes/funny/img.avif" type("image/avif"),
+    "../img/themes/funny/img.webp" type("image/webp"),
+    "../img/themes/funny/img.jpg" type("image/jpeg")
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: calc(100vw - 16px);
+  max-height: 1200px;
+}
+
+.game-field {
+  justify-content: center;
+}
+
+.input-number {
+  font-size: 32px;
+  border-radius: 10px;
+  width: 120px;
+  padding: 10px 10px;
+}
+
+.input-label {
+  color: white;
+  font-size: 24px;
+}
+
+.start-field {
+  padding: 15px 15px;
+  margin-top: -90px;
+}
+
+.timer {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.game-menu {
+  position: absolute;
+  top: 0;
+  padding: 15px 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  row-gap: 30px;
+  height: fit-content;
+  width: 300px;
+  opacity: 0;
+}
+
+.menu-label {
+  font-size: 28px;
+}
+
+.menu-close {
+  height: 80px;
+  width: 80px;
+}
+
+.start-btn {
+  padding: 0;
+  border: 7px solid white;
+  border-radius: 100%;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin-top: -60px;
+  transition: all .3s ease-in-out;
+}
+
+.start-btn-start {
+  background: linear-gradient(339deg, rgba(2,0,36,1) 0%, rgba(20,121,9,0.8449580515801073) 35%, rgba(0,212,255,1) 100%);
+}
+
+.start-btn-stop {
+  background: linear-gradient(11deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,175,69,0.8113446062121391) 100%);
+}
+
+.start-btn:hover {
+  /* border-color: greenyellow; */
+  /* color: green; */
+  border-color: coral;
+  /* color: coral; */
+  /* color: darkcyan; */
+  /* border-color: grey; */
+}
+
+.start-btn:active {
+  /* border-color: coral; */
+  transform: translateY(5px);
+  border-color: white;
+  color: white;
+}
+
+.set-btn {
+  width: 100px;
+  height: 100px;
+}
+
+.set-btn path {
+  fill: white;
+}
+
+.game-bkg {
+  width: 100%;
+}
+
+.menu-active {
+  /* transform: translateY(100px); */
+  transition: opacity .3s ease-in-out;
+  opacity: 100%;
+  /* animation: opacity-flow 1s ease-in-out; */
+}
+
+.card {
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.card-img {
+  height: auto;
+  width: 100%;
+  line-height: 0;
+  transition: all 1s ease-in-out;
+}
+
+.digits-card {
+  border-radius: 10px;
+  padding: 25px 25px;
+  background: rgb(133,150,150);
+  background: linear-gradient(0deg, rgba(133,150,150,1) 0%, rgba(71,68,59,1) 90%);
+}
+
+.poker-card {
+  background-image: url("../img/games/poker/backside.svg");
+  background-size: 100%;
+}
+
+.patrick-card {
+  background-image: url("../img/games/patrick/backside.svg");
+  background-size: 100%;
+}
+
+.holidays-card {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.card-opened-v1 {
+  /* transform: rotate3d(1, 0, 0, 180deg); */
+  filter:  opacity(100%);
+}
+
+.card-closed-v1 {
+  transform: rotate3d(1, 0, 0, 180deg);
+  filter:  opacity(0%);
+  /* transform: translate3d(5ch, 0.4in, 5em); */
+  /* transition: transform .3s ease-in-out; */
+  /* transform: perspective(500px) translate3d(10px, 0, 0px); */
+  /* transform: matrix3d(); */
+}
+
+.card-closed-v2 {
+  filter:  opacity(0%);
+}
+
+.card-closed-v3 {
+  transform: rotate3d(0, 1, 0, 180deg);
+  filter:  opacity(0%);
+}
+
+.card-closed-v4 {
+  transform: rotate3d(0, 0, 1, 180deg);
+  filter:  opacity(0%);
+}
+
+.card-select-red {
+  outline-width: 3px;
+  outline-color: salmon;
+  outline-style: solid;
+  outline-offset: 1px;
+}
+
+.card-select-green {
+  outline-width: 3px;
+  outline-color: green;
+  outline-style: solid;
+  outline-offset: 1px;
+}
+
+.card-select-right {
+  filter: sepia(90%);
+}
+
+.card-notpair {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.card-notpair-v2 {
+  animation: rocks-left-right .8s;
+}
+
+.input-time {
+  margin-bottom: 15px;
+}
+
+.info-block {
+  padding-bottom: 15px;
+}
+
+.grid-btn-passive path {
+  fill: grey;
+}
+
+.grid-btn-active path {
+  fill: green;
+}
+
+.select {
+  padding: 0;
+  font-size: 24px;
+}
+
+.confirm-dlg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  /* top: calc(100vh / 2); */
+  top: 400px;
+  z-index: 100;
+  padding: 25px 25px;
+  border-radius: 20px;
+}
+
+.confirm-text {
+  font-size: 40px;
+  color: cornsilk;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.confirm-btn {
+  font-size: 40px;
+  min-width: 100px;
+  background-color: cornsilk;
+  padding: 10px 10px;
+  line-height: normal;
+  border-radius: 10px;
+  transition: background-color .3s ease-in-out;
+}
+
+.confirm-btn:hover {
+  background-color: coral;
+}
+
+.confirm-btn-wrap {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.info {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-justify-spb {
+  justify-content: space-between;
+}
+
+.flex-allign-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-allign-end {
+  align-items: end;
+}
+
+.display-none {
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}

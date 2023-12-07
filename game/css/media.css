@@ -1,0 +1,78 @@
+/* настройки сетки */
+:root {
+  --gr1-grid-columns: 5;
+  --gr2-grid-columns: 4;
+  --gr3-grid-columns: 3;
+  --gr4-grid-columns: 2;
+  --gr5-grid-columns: 1;
+  --gr6-grid-columns: 1;
+}
+
+.start-field {
+  padding-top: 90px;
+}
+
+.grid-btn-minus, .grid-btn-plus, .set-btn-img {
+  width: 70px;
+  height: 70px;
+}
+
+@media (min-width: 480px) {
+  .start-field {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  :root {
+    --gr1-grid-columns: 6;
+    --gr2-grid-columns: 5;
+    --gr3-grid-columns: 4;
+    --gr4-grid-columns: 3;
+    --gr5-grid-columns: 2;
+  }
+
+  .start-btn {
+    margin-top: -110px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .grid-btn-minus, .grid-btn-plus, .set-btn-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gr1-grid-columns: 7;
+    --gr2-grid-columns: 6;
+    --gr3-grid-columns: 5;
+    --gr4-grid-columns: 4;
+    --gr5-grid-columns: 3;
+    --gr6-grid-columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gr1-grid-columns: 8;
+    --gr2-grid-columns: 7;
+    --gr3-grid-columns: 6;
+    --gr4-grid-columns: 5;
+    --gr5-grid-columns: 4;
+    --gr6-grid-columns: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --gr1-grid-columns: 9;
+    --gr2-grid-columns: 8;
+    --gr3-grid-columns: 7;
+    --gr4-grid-columns: 6;
+    --gr5-grid-columns: 5;
+    --gr6-grid-columns: 4;
+  }
+}

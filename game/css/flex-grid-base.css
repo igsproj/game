@@ -1,0 +1,157 @@
+.grid-row-auto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-row-fixed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.grid-col-auto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.grid-col-fixed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.grid-cell-full {
+  flex-basis: 100%
+}
+
+.grid-cell-auto {
+  flex-basis: auto;
+}
+
+/******************************************************************
+grid 1
+******************************************************************/
+
+:root {
+  --gr1-grid-columns: 1;
+  --gr1-grid-row-gap: 15px;
+  --gr1-grid-col-gap: 15px;
+  --gr1-cell-width-1: calc((100% - calc(var(--gr1-grid-columns) - 1) * var(--gr1-grid-row-gap)) / var(--gr1-grid-columns));
+}
+
+.gr1-grid {
+  row-gap: var(--gr1-grid-row-gap);
+  column-gap: var(--gr1-grid-col-gap);
+}
+
+.gr1-cell {
+  flex-basis: var(--gr1-cell-width-1);
+  max-width: var(--gr1-cell-width-1);
+}
+
+/******************************************************************
+grid 2
+******************************************************************/
+
+:root {
+  --gr2-grid-columns: 1;
+  --gr2-grid-row-gap: 15px;
+  --gr2-grid-col-gap: 15px;
+  --gr2-cell-width-1: calc((100% - calc(var(--gr2-grid-columns) - 1) * var(--gr2-grid-row-gap)) / var(--gr2-grid-columns));
+}
+
+.gr2-grid {
+  row-gap: var(--gr2-grid-row-gap);
+  column-gap: var(--gr2-grid-col-gap);
+}
+
+.gr2-cell {
+  flex-basis: var(--gr2-cell-width-1);
+  max-width: var(--gr2-cell-width-1);
+}
+
+/******************************************************************
+grid 3
+******************************************************************/
+
+:root {
+  --gr3-grid-columns: 1;
+  --gr3-grid-row-gap: 15px;
+  --gr3-grid-col-gap: 15px;
+  --gr3-cell-width-1: calc((100% - calc(var(--gr3-grid-columns) - 1) * var(--gr3-grid-row-gap)) / var(--gr3-grid-columns));
+}
+
+.gr3-grid {
+  row-gap: var(--gr3-grid-row-gap);
+  column-gap: var(--gr3-grid-col-gap);
+}
+
+.gr3-cell {
+  flex-basis: var(--gr3-cell-width-1);
+  max-width: var(--gr3-cell-width-1);
+}
+
+/******************************************************************
+grid 4
+******************************************************************/
+
+:root {
+  --gr4-grid-columns: 1;
+  --gr4-grid-row-gap: 15px;
+  --gr4-grid-col-gap: 15px;
+  --gr4-cell-width-1: calc((100% - calc(var(--gr4-grid-columns) - 1) * var(--gr4-grid-row-gap)) / var(--gr4-grid-columns));
+}
+
+.gr4-grid {
+  row-gap: var(--gr4-grid-row-gap);
+  column-gap: var(--gr4-grid-col-gap);
+}
+
+.gr4-cell {
+  flex-basis: var(--gr4-cell-width-1);
+  max-width: var(--gr4-cell-width-1);
+}
+
+/******************************************************************
+grid 5
+******************************************************************/
+
+:root {
+  --gr5-grid-columns: 1;
+  --gr5-grid-row-gap: 15px;
+  --gr5-grid-col-gap: 15px;
+  --gr5-cell-width-1: calc((100% - calc(var(--gr5-grid-columns) - 1) * var(--gr5-grid-row-gap)) / var(--gr5-grid-columns));
+}
+
+.gr5-grid {
+  row-gap: var(--gr5-grid-row-gap);
+  column-gap: var(--gr5-grid-col-gap);
+}
+
+.gr5-cell {
+  flex-basis: var(--gr5-cell-width-1);
+  max-width: var(--gr5-cell-width-1);
+}
+
+/******************************************************************
+grid 6
+******************************************************************/
+
+:root {
+  --gr6-grid-columns: 1;
+  --gr6-grid-row-gap: 15px;
+  --gr6-grid-col-gap: 15px;
+  --gr6-cell-width-1: calc((100% - calc(var(--gr6-grid-columns) - 1) * var(--gr6-grid-row-gap)) / var(--gr6-grid-columns));
+}
+
+.gr6-grid {
+  row-gap: var(--gr6-grid-row-gap);
+  column-gap: var(--gr6-grid-col-gap);
+}
+
+.gr6-cell {
+  flex-basis: var(--gr6-cell-width-1);
+  max-width: var(--gr6-cell-width-1);
+}
